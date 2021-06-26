@@ -1,0 +1,19 @@
+﻿@model Blog.Models.Post
+
+<form action="/Post/EditarPost" method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" name="DataPublicacao" value="@Model.DataPublicacao" />
+    <input type="hidden" name="Publicado" value="@Model.Publicado.ToString()" />
+
+    <label>
+        Titulo: <input name="Titulo" value="@Model.Titulo" />
+    </label>
+    <label>
+        Resumo: <input name="Resumo" value="@Model.Resumo" />
+    </label>
+    <label>
+        Categoria: <input name="Categoria" value="@Model.Categoria" />
+    </label>
+    <button type="submit">Atualizar</button>
+</form> 
